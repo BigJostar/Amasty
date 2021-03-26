@@ -1,0 +1,9 @@
+<?php
+require_once('./config/config.php');
+require_once('./classes/balance.class.php');
+require_once('./classes/transactions.class.php');
+require_once('./classes/between.class.php');
+dbInfo::takeInfo($dbConnect,3);
+trans::findMaxTrans($dbConnect);
+betweenOneCity::between_trans($dbConnect);
+?>
